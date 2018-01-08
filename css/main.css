@@ -3,76 +3,134 @@ body {
 }
 
 #splash {
-  /*background: #11998e;
-  background: -webkit-linear-gradient(to right, #11998e, #38ef7d);
-  background: linear-gradient(to right, #11998e, #38ef7d);*/
-  background-color: white;
+  background: #b3ffab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b3ffab, #12fff7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b3ffab, #12fff7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   min-height: 100%;
   position: absolute;
   width: 100%;
 }
 
-.background {
-  background-image: url('../assets/images/social.PNG');
-}
-
-.letter-box {
-  width: 800px;
-  margin-top: 50px;
-}
-
-
-.letter {
-  font-family: 'Berkshire Swash', cursive;
-  text-shadow: 4px 4px black;
-  font-size: 120px;
-  position: absolute;
-  z-index: 3;
-}
-
-.social-letter{
-  color: #075;
-}
-
-.green-letter {
-  right: 240px;
-  bottom: 205px;
-  color: #2a6;
-}
-
-.vertical-align {
-   transform: translateY(150%);
- }
-
-.image {
-  height: 450px;
-  width: 450px;
-  z-index: 1;
-  background-image: url('../assets/images/2.PNG');
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
-}
-
-.eyes {
-  width: 250px;
-  position: absolute;
-  bottom: 290px;
-  right: 240px;
-}
-
-.hoja-img {
-  width: 400px;
-  position: absolute;
-  top: 250px;
-  right: 350px;
-  -webkit-transform: rotate(35deg);
-  z-index: 2;
-}
-
 .icons-bottom {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+i.medium {
+  font-size: 36px;
+}
+
+.letter-box {
+  margin-top: 100px;
+  height: auto;
+  padding: 0 30px;
+}
+
+.social-letter {
+  color: white;
+}
+
+.green-letter {
+  top: 250px;
+  right: 40px;
+  color: white;
+}
+
+.letter {
+  font-family: 'Berkshire Swash', cursive;
+  text-shadow: 4px 4px black;
+  font-size: 80px;
+  z-index: 3;
+}
+
+.eyes {
+  width: 150px;
+  top: 250px;
+  right: 55px;
+}
+
+.hoja-img {
+  width: 200px;
+  top: 300px;
+  right: 155px;
+  -webkit-transform: rotate(35deg);
+  z-index: 2;
+}
+
+.right {
+  float: left !important;
+}
+
+.letter, .eyes, .hoja-img {
+  position: absolute;
+}
+
+@media (min-width: 992px) {
+  #splash {
+    background: white;
+    background-size: cover;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  i.medium {
+    font-size: 4rem;
+  }
+
+  .image {
+    height: 450px;
+    width: 450px;
+    z-index: 1;
+    background-image: url('../assets/images/2.PNG');
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .letter-box {
+    width: 800px;
+    margin-top: 50px;
+    height: auto;
+  }
+
+  .letter {
+    font-family: 'Berkshire Swash', cursive;
+    text-shadow: 4px 4px black;
+    font-size: 120px;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .social-letter{
+    color: #075;
+  }
+
+  .green-letter {
+    right: 240px;
+    bottom: 205px;
+    color: #2a6;
+  }
+
+  .eyes {
+    width: 250px;
+    position: absolute;
+    top: 225px;
+    right: 240px;
+  }
+
+  .hoja-img {
+    width: 400px;
+    position: absolute;
+    top: 250px;
+    right: 350px;
+    -webkit-transform: rotate(35deg);
+    z-index: 2;
+  }
+
+  .right {
+    float: right !important;
+  }
 }
