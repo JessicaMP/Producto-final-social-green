@@ -1,7 +1,7 @@
 function begin() {
   setTimeout(function() {
     $('#splash').fadeOut();
-    $('#page-star').removeClass('hide');
+    $('#page-start').removeClass('hide');
   }, 3500);
 };
 

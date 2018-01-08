@@ -1,5 +1,6 @@
-body {
-  background-color: red;
+* {
+
+
 }
 /*________________________Estilos para el splash____________________*/
 #splash {
@@ -35,10 +36,10 @@ i.medium {
 }
 
 .letter {
-  font-family: 'Berkshire Swash', cursive;
   text-shadow: 4px 4px black;
   font-size: 80px;
   z-index: 3;
+  -webkit-text-stroke: 2px black;
 }
 
 .eyes {
@@ -65,6 +66,7 @@ i.medium {
 
 @media (min-width: 992px) {
   #splash {
+    font-family: 'Berkshire Swash', cursive;
     background: white;
     background-size: cover;
     min-height: 100%;
@@ -79,7 +81,7 @@ i.medium {
     height: 450px;
     width: 450px;
     z-index: 1;
-    background-image: url('../assets/images/2.PNG');
+    background-image: url('../assets/images/2.png');
     background-size: cover;
     bottom: 0;
   }
@@ -96,14 +98,14 @@ i.medium {
     z-index: 3;
   }
 
-  .social-letter{
+  .social-letter {
     color: #075;
   }
 
   .green-letter {
     right: 240px;
     bottom: 205px;
-    color: #2a6;
+    color: green;
   }
 
   .eyes {
@@ -127,4 +129,28 @@ i.medium {
   .image, .letter, .eyes, .hoja-img {
     position: absolute;
   }
+  /*Page of Star*/
+  .logo {
+    width: 400px;
+    margin-top: 100px;
+  }
+}
+/*________________________Estilos para Page of Star____________________*/
+#page-start {
+  background-image: url('../assets/images/background.svg');
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.img-btn {
+  width: 40px;
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+
+.blue-dark {
+  background-color: #075;
 }
