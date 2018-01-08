@@ -1,19 +1,17 @@
 body {
   background-color: red;
 }
-
+/*________________________Estilos para el splash____________________*/
 #splash {
   background: #b3ffab; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #b3ffab, #12fff7); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #b3ffab, #12fff7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
   min-height: 100%;
-  position: absolute;
   width: 100%;
 }
 
 .icons-bottom {
-  position: absolute;
   bottom: 0;
   right: 0;
 }
@@ -24,18 +22,16 @@ i.medium {
 
 .letter-box {
   margin-top: 100px;
-  height: auto;
   padding: 0 30px;
 }
 
-.social-letter {
+.social-letter, .green-letter {
   color: white;
 }
 
 .green-letter {
   top: 250px;
   right: 40px;
-  color: white;
 }
 
 .letter {
@@ -63,7 +59,7 @@ i.medium {
   float: left !important;
 }
 
-.letter, .eyes, .hoja-img {
+#splash, .letter, .eyes, .hoja-img, .icons-bottom {
   position: absolute;
 }
 
@@ -72,7 +68,6 @@ i.medium {
     background: white;
     background-size: cover;
     min-height: 100%;
-    position: absolute;
     width: 100%;
   }
 
@@ -86,21 +81,18 @@ i.medium {
     z-index: 1;
     background-image: url('../assets/images/2.PNG');
     background-size: cover;
-    position: absolute;
     bottom: 0;
   }
 
   .letter-box {
     width: 800px;
     margin-top: 50px;
-    height: auto;
   }
 
   .letter {
     font-family: 'Berkshire Swash', cursive;
     text-shadow: 4px 4px black;
     font-size: 120px;
-    position: absolute;
     z-index: 3;
   }
 
@@ -116,14 +108,12 @@ i.medium {
 
   .eyes {
     width: 250px;
-    position: absolute;
     top: 225px;
     right: 240px;
   }
 
   .hoja-img {
     width: 400px;
-    position: absolute;
     top: 250px;
     right: 350px;
     -webkit-transform: rotate(35deg);
@@ -132,5 +122,9 @@ i.medium {
 
   .right {
     float: right !important;
+  }
+
+  .image, .letter, .eyes, .hoja-img {
+    position: absolute;
   }
 }
