@@ -1,4 +1,4 @@
-/*function begin() {
+function begin() {
   setTimeout(function() {
     $('#splash').fadeOut();
     $('#page-star').removeClass('hide');
