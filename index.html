@@ -8,12 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans+Condensed" rel="stylesheet">
     <!--<link rel="stylesheet" href="vendors/css/flexboxgrid.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <!--_____________________________________SPLASH________________________________-->
-    <section id="splash">
+    <section id="splash"  class="hide">
       <!--__________ICONOS TOP__________-->
       <div>
         <i class="medium material-icons green-text text-lighten-2">android</i>
@@ -51,7 +52,7 @@
       </div>
     </section>
     <!--_____________________________________Page of Start________________________________-->
-    <section id="page-start" class="hide">
+    <section id="page-start">
       <div class="center">
         <figure>
           <img src="assets/images/logo2.png" alt="" class="responsive-img logo">
@@ -68,25 +69,37 @@
         </figure>
       </div>
       <!--Modal de Sing up-->
-      <div id="modal1" class="modal">
+      <div id="modal1" class="modal modal-width-sing-up modal-background-2">
         <div class="modal-content">
+
           <figure class="center">
             <img src="assets/images/logo2.png" alt="" class="responsive-img logo-modal">
           </figure>
-
-          <div id="login" class="white">
-            <div class="col-xs-12">
+          <div id="login" class="white col-xs-12">
+            <div class="row">
               <h6 class=""><strong>REGISTRATE</strong></h6>
               <div class="center">
                 <button id="start-login" class="btn btn-raised red white-text" type="button" name="button">
+                  <i class="fa fa-google-plus-official" aria-hidden="true"></i>
                   Log in with Google
                 </button>
               </div>
+              <h6><strong>CREA TU CUENTA</strong></h6>
+              <div class="input-field col s8 offset-s2">
+                <i class="material-icons prefix icon-green">account_circle</i>
+                <input id="email" type="email" name="" value="">
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s8 offset-s2">
+                <i class="material-icons prefix icon-green">lock</i>
+                <input id="contrasena" type="password" name="" value="">
+                <label for="contrasena">Contraseña</label>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          <div class="center">
+            <a onclick="registrar()" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text">Set up</a>
+          </div>
         </div>
       </div>
       <!--Modal de Log in-->
@@ -100,25 +113,25 @@
               <div class="row">
                 <div class="input-field col s8 offset-s2">
                   <i class="material-icons prefix icon-green">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Usuario</label>
+                  <input id="email2" type="email" name="" value="">
+                  <label for="email2">E-mail</label>
                 </div>
                 <div class="input-field col s8 offset-s2">
                   <i class="material-icons prefix icon-green">lock</i>
-                  <input id="icon_telephone" type="tel" class="validate">
-                  <label for="icon_telephone">Contraseña</label>
+                  <input id="contrasena2" type="password" name="" value="">
+                  <label for="contrasena2">Contraseña</label>
                 </div>
               </div>
             </form>
-            <div class=" center">
-              <a class="waves-effect waves-light btn-large blue-dark modal-trigger" href="#modal2"><img src="assets/images/btn.png" alt="" class="img-btn"><strong>Log in</strong></a>
+            <div class="center">
+              <btn onclick="ingreso()" class="waves-effect waves-light btn-large blue-dark modal-trigger" href="#modal2"><img src="assets/images/btn.png" alt="" class="img-btn"><strong>Log in</strong></btn>
+              <div id="contenido"></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
-    <footer class="hide">
+    <footer>
       <nav class="transparent">
         <a href="#" data-activates="mobile-demo" class="button-collapse btn-floating btn-large waves-effect waves-light transparent"><i class="material-icons green-text">menu</i></a>
         <div class="nav-wrapper bottom-footer">
