@@ -214,8 +214,23 @@ nav ul a, .bottom-footer a {
   -webkit-text-stroke: 1px black;
 }
 
+#login {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
 @media (min-width: 992px) {
   /*Page of Star*/
+  #page-start {
+    background-image: url('../assets/images/background.svg');
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
   .logo {
     width: 400px;
     margin-top: 30px;
@@ -248,6 +263,13 @@ nav ul a, .bottom-footer a {
     width: 200px;
     position: relative;
     right: 10px;
+  }
+
+  .img-btn {
+    width: 40px;
+    position: relative;
+    top: 10px;
+    left: -10px;
   }
 
   .modal-width {
