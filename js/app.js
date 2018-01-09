@@ -1,3 +1,4 @@
+// SPLASH
 function begin() {
   setTimeout(function() {
     $('#splash').fadeOut();
@@ -7,7 +8,7 @@ function begin() {
 };
 
 $(document).ready(begin);
-
+// Initializacion de materialize
 $( document ).ready(function(){
   $(".button-collapse").sideNav();
   $('.modal').modal();
