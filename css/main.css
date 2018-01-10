@@ -224,7 +224,6 @@ nav ul a, .bottom-footer a {
 
 .modal {
   max-height: 100%;
-  width: 35%;
 }
 
 @media (min-width: 992px) {
