@@ -57,6 +57,7 @@ input[type=search]:not(.browser-default) {
   margin: 0;
   margin-bottom: 20px;
   overflow: hidden;
+  border: 2px solid #055;
 }
 
 .styleLetter {
@@ -66,6 +67,9 @@ input[type=search]:not(.browser-default) {
   letter-spacing: 2px;
 }
 
+.modal.modal-height {
+  height: 50%;
+}
 @media (min-width: 992px) {
   .logo-nav {
     width: 15%;
@@ -113,5 +117,6 @@ input[type=search]:not(.browser-default) {
     max-width: 50%;
     border-radius: 10px;
   }
+
 
 }

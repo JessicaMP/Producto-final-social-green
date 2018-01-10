@@ -85,7 +85,7 @@
           <div class="box-btn col offset-s3 grey lighten-3">
             <div class="">
               <a class="btn-floating btn-large waves-effect waves-light  btn modal-trigger red" href="#modal3"><i class="material-icons">text_fields</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">camera_alt</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue" data-target="modal5" href="#modal5"><i class="material-icons">camera_alt</i></a>
               <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">star</i></a>
               <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">location_on</i></a>
               <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">speaker_notes</i></a>
@@ -109,7 +109,7 @@
     </section>
     <!--__________________Modales del post____________________-->
     <!--Agregando texto-->
-    <div id="modal3" class="modal modal-fixed-footer">
+    <div id="modal3" class="modal modal-fixed-footer modal-height">
       <div class="modal-content">
         <a href="#"><i class="material-icons">account_circle</i>Usuario</a>
         <div class="box-right">
@@ -119,6 +119,34 @@
       </div>
       <div class="modal-footer">
         <a id="btn-share-post" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">reply</i>Share</a>
+      </div>
+    </div>
+    <!--__________________Modales del photo____________________-->
+    <!--Agregando texto-->
+    <div id="modal5" class="modal">
+      <div class="modal-content modal-photo">
+        <div class="center">
+          <h6>Elige la imagen que deseas publicar</h6>
+        </div>
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn light-green accent-3">
+              <i class="material-icons">linked_camera</i>
+              <input type="file" multiple>
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" placeholder="Change your photo">
+            </div>
+          </div>
+        </form>
+        <figure class="center">
+          <img src="../assets/images/image-refence.jpg" alt="">
+        </figure>
+        <div class="right col s3">
+          <a id="btn-share-photo" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">file_upload</i>Public</a>
+
+        </div>
+        </div>
       </div>
     </div>
     <script src="../vendors/js/jquery-3.2.1.js"></script>
