@@ -129,8 +129,8 @@ $( document ).ready(function(){
   }
 
   function ingreso() {
-    var email2 = document.getElementById('email').value;
-    var contrasena2 = document.getElementById('contrasena').value;
+    var email2 = document.getElementById('email2').value;
+    var contrasena2 = document.getElementById('contrasena2').value;
       firebase.auth().signInWithEmailAndPassword(email2, contrasena2).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -164,8 +164,11 @@ $( document ).ready(function(){
   }
   observador();
 
-
+/*------------dierccionar a html -------------------*/
   function aparece() {
+
     var contenido = document.getElementById('contenido');
       contenido.innerHTML = 'solo lo ve usuario activo';
+    window.location.href = 'views/green.html';
+
   }
