@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.right-movil{
+  text-align: right;
+}
+.col{
+  width: 100%;
+/*  border: 1px solid #b2c8ad;*/
+
+}
+.btn-left{
+  font-size: 20%;
+  display: inline-block;
+
+}
+.btn-movil{
+  display: inline-block;
+}
+.right-desktop{
+  display: none;
+
+}
+.search{
+  display: none;
+}
+.div-right {
+  border: 1px solid green;
+  border-radius: 5px;
+  text-align: left;
+}
+.events{
+  height: 20%;
+}
+.challenge{
+  height: 20%;
+}
+.activities{
+  height: 25%;
+}
+.content-right{
+  margin: 10% 5%;
+}
+.title{
+  font-size: 18px;
+
+}
+.sub-div{
+  background: #53a345;
+  color: white;
+}
+
+.par{
+  display: inline-block;
+  padding:  1%;
+}
+.par2{
+  padding-left: 5%;
+}
+.letter-color{
+  color: #339510;
+}
+.left-desktop{
+  display: none;
+}
+
+.between{
+/*  border: 1px solid red;*/
+  height: 100vh;
+}
+/*destock*/
+  @media (min-width: 992px) {
+.left-desktop{
+  text-align: center;
+  display: inline-block;
+}
+.right-movil{
+  display: none;
+}
+.col{
+  height: 100vh;
+  width: 100%;
+  border: 1px solid #b2c8ad;
+
+}
+.btn-left{
+  font-size: 20%;
+  margin: 10%;
+}
+
+.search{
+  display: inline-block;
+}
+.right-desktop{
+  text-align: center;
+  display: inline-block;
+
+}
+.div-right {
+  border: 1px solid green;
+  border-radius: 5px;
+  text-align: left;
+}
+.events{
+  height: 20%;
+}
+.challenge{
+  height: 20%;
+}
+.activities{
+  height: 25%;
+}
+.content-right{
+  margin: 10% 5%;
+}
+.title{
+  font-size: 18px;
+
+}
+.sub-div{
+  background: #53a345;
+  color: white;
+}
+
+.par{
+  display: inline-block;
+  padding:  1%;
+}
+.par2{
+  padding-left: 5%;
+}
+.letter-color{
+  color: #339510;
+}
+}/*destock*/
