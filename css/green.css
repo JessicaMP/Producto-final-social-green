@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
-}
 
+}
+body{
+  background-image: url(../assets/images/background.svg);
+}
 .right-movil{
   text-align: right;
 }
@@ -136,3 +139,22 @@
   color: #339510;
 }
 }/*destock*/
+
+/**/
+.modal-fixed-footer{
+  color: black;
+}
+.images{
+  text-align: center;
+}
+.imgAm{
+  width: 80%;
+  border: 1px solid green;
+  padding: 10px;
+}
+.quar{
+ background:rgba(228, 246, 234, 0.77);
+  width:100%;
+  text-align: center;
+  padding: 10px;
+}
