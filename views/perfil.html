@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil Social Green</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Fira+Sans+Condensed" rel="stylesheet">
+    <!--<link rel="stylesheet" href="vendors/css/flexboxgrid.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper light-green accent-3">
+          <a href="#!" class="brand-logo ">
+            <img src="../assets/images/logo2.png" alt="Logo" class="logo-nav">
+            <span class="social-white-letter">Social Green</span>
+            <div class="center col s10">
+              <a href="#" class="social-green-letter">Social Green</a>
+            </div>
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons material-search">search</i></label>
+            </li>
+            <li><a href="#"><strong>Amigos</strong></a></li>
+            <li><a href="#"><strong>Notas</strong></a></li>
+            <li><a href="#"><strong>Actividades</strong></a></li>
+            <li><a href="#"><strong>Mensajes</strong></a></li>
+            <li><a href="#"><i class="material-icons">account_circle</i></a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <input id="search" type="search" required class="right search-position-movile">
+              <label class="label-icon" for="search"><i class="material-icons material-search">search</i></label>
+            </li>
+            <li><a href="#">Amigos</a></li>
+            <li><a href="#">Notas</a></li>
+            <li><a href="#">Actividades</a></li>
+            <li><a href="#">Mensajes</a></li>
+            <li><a href="#"><i class="material-icons">account_circle</i>Usuario</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="row">
+      <div class="col s3 usuario">
+        <figure>
+          <img src="../assets/images/usuario.png" alt="" class="responsive-img photo-user">
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn light-green accent-3">
+                <span class="">Photo</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Change your photo">
+              </div>
+            </div>
+          </form>
+        </figure>
+        <div class="center">
+          <h5><strong>Name and last name</strong></h5>
+          <h6><strong>"Favorite phrase"</strong></h6>
+          <h6><strong>Telefone number</strong></h6>
+        </div>
+        <div class="center info-user">
+          <a href="#" class="col"><i class="material-icons green-text">create</i><p class="green-text"><strong>400<br>POST</strong></p></a>
+          <a href="#" class="col"><i class="material-icons green-text">face</i><p class="green-text"><strong>100<br>FOLLOWERS</strong></p></a>
+          <a href="#" class="col"><i class="material-icons green-text">favorite</i><p class="green-text"><strong>250<br>FOLLOWING</strong></p></a>
+        </div>
+        <div class="center">
+          <a class="waves-effect waves-light btn green"><i class="material-icons">create</i>Edith</a>
+
+        </div>
+      </div>
+      <div class="col s9">
+        <!--Botones para postear-->
+          <div class="box-btn col offset-s3 grey lighten-3">
+            <div class="">
+              <a class="btn-floating btn-large waves-effect waves-light  btn modal-trigger red" href="#modal3"><i class="material-icons">text_fields</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">camera_alt</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">star</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">location_on</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">speaker_notes</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">volume_up</i></a>
+              <a class="btn-floating btn-large waves-effect waves-light gray"><i class="material-icons">videocam</i></a>
+            </div>
+            <div class="">
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Text</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Photo</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Score</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Local</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Chat</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Audio</strong></span></a>
+              <a href="#" class="black-text"><span class="btn-letters"><strong>Video</strong></span></a>
+            </div>
+          </div>
+          <div id="show-post" class="col s12">
+
+          </div>
+
+      </div>
+      <!--__________________Modales del post____________________-->
+      <!--Agregando texto-->
+      <div id="modal3" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <a href="#"><i class="material-icons">account_circle</i>Usuario</a>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        </div>
+      </div>
+    </section>
+
+    <script src="../vendors/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="../js/perfil.js"></script>
+  </body>
+</html>
