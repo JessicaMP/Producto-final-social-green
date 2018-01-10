@@ -24,29 +24,94 @@ $( document ).ready(function(){
     messagingSenderId: "450259756672"
   };
   firebase.initializeApp(config);
+// Registrando con google
+  var user1 = null;
 
-  var user = null;
+  var $loginBtn1 = $('#start-login-google');
 
-  var $loginBtn = $('#start-login');
-
-  $loginBtn.on('click', googleLogin);
+  $loginBtn1.on('click', googleLogin);
 
   function googleLogin() {
-    var provider = new firebase.auth.GoogleAuthProvider();
+    var provider1 = new firebase.auth.GoogleAuthProvider();
 
     //esta es la doc de firebase
     firebase
       .auth()
-      .signInWithPopup(provider)
+      .signInWithPopup(provider1)
       .then(function(result) {
         //guardamos el usuario que nos trae resuslt
-        user = result.user;
+        user = result.user1;
         //mostramos su contenido
-        console.log(user);
+        console.log(user1);
         //ocultamos el div de login
-        $('#login').fadeOut();
+        $('#login1').fadeOut();
       });
   }
+
+  // Registrando con facebook
+    var user2 = null;
+
+    var $loginBtn2 = $('#start-login-facebook');
+
+    $loginBtn2.on('click', facebookLogin);
+
+    function facebookLogin() {
+      var provider2 = new firebase.auth.FacebookAuthProvider();
+
+      //esta es la doc de firebase
+      firebase
+        .auth()
+        .signInWithPopup(provider2)
+        .then(function(result) {
+          // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+          var token = result.credential.accessToken;
+          // The signed-in user info.
+          var user = result.user;
+          // ...
+        }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+        });
+
+        firebase
+        .auth()
+        .getRedirectResult()
+        .then(function(result) {
+        if (result.credential) {
+          // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+          var token = result.credential.accessToken;
+          // ...
+        }
+        // The signed-in user info.
+        var user = result.user;
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+      //Cerrar sesion
+      firebase
+      .auth()
+      .signOut()
+      .then(function() {
+      // Sign-out successful.
+      }).catch(function(error) {
+      // An error happened.
+    })
+    }
+
+
 
 // Vinculando con Email
   function registrar() {
@@ -103,5 +168,4 @@ $( document ).ready(function(){
   function aparece() {
     var contenido = document.getElementById('contenido');
       contenido.innerHTML = 'solo lo ve usuario activo';
-
   }
