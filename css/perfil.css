@@ -32,6 +32,40 @@ input[type=search]:not(.browser-default) {
   right: 120px;
 }
 
+.box-right {
+  box-sizing: border-box;
+  float: right;
+  padding: 10px;
+  width: 100%;
+  position: static;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.text-area-height {
+  height: 5rem;
+}
+
+.styleBox {
+  background-color: white;
+  width: auto;
+  height: 100px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.styleLetter {
+  text-decoration: none;
+  margin: 0;
+  padding: 5px 0;
+  letter-spacing: 2px;
+}
+
 @media (min-width: 992px) {
   .logo-nav {
     width: 15%;
