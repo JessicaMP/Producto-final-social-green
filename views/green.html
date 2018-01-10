@@ -40,8 +40,45 @@
                  <input id="search" type="search" required>
                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                  <i class="material-icons">close</i>
-               </div>
+<!---->       </div><!--input-field green-->
              </form>
+
+             <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Publicar</a>
+
+             <div id="modal3" class="modal modal-fixed-footer">
+               <div class="modal-content">
+                 <a href="#"><i class="material-icons">account_circle</i>Usuario</a>
+                 <div class="box-right">
+                   <textarea name="text" id="texto" class="text-area-height" placeholder="¿Qué estas pensando?" type="text" autofocus></textarea>
+
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <a id="btn-share-post" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">reply</i>Share</a>
+                <hr>
+               </div>
+             </div>
+              <br>
+              <div class="images">
+                <div class="quar">
+                  <img class="imgAm"src="http://www.yucatanalamano.com/wp-content/uploads/2017/05/MG_1328.jpg" alt="">
+
+                </div>
+                <div class="quar">
+                  <img class="imgAm"src="https://www.expoknews.com/wp-content/uploads/2015/02/dia-del-arbol.jpg" alt="">
+
+                </div>
+                <div class="quar">
+                  <img class="imgAm"src="https://i.pinimg.com/originals/da/84/7a/da847a7721794827708938a97a0b77c6.jpg" alt="">
+
+                </div>
+                <div class="quar">
+                  <img class="imgAm" src="http://www.aprendizajeverde.net/sites/default/files/practicas/reforestemos-y-salvemos-nuestro-planeta-1.jpg" alt="">
+
+                </div>
+              </div>
+
+
            </div>
          </nav>
 
@@ -97,6 +134,8 @@
 
 
     <script src="../vendors/js/jquery-3.2.1.js"></script>
-  <!--  <script src="js/SocialGreen.js"></script>-->
+    <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="../js/green.js"></script>
   </body>
 </html>

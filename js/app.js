@@ -139,6 +139,10 @@ $( document ).ready(function(){
       console.log(errorMessage);
       // ...
     });
+  /**/
+        window.location.href = 'views/green.html';
+
+  /**/
   }
 
   function observador() {
@@ -169,6 +173,6 @@ $( document ).ready(function(){
 
     var contenido = document.getElementById('contenido');
       contenido.innerHTML = 'solo lo ve usuario activo';
-    window.location.href = 'views/green.html';
+  /*  window.location.href = 'views/green.html'; */
 
   }
