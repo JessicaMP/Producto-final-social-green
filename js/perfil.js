@@ -1,3 +1,4 @@
+// Materialize
 $(document).ready(function(){
    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
    $(".button-collapse").sideNav();
@@ -7,6 +8,7 @@ $(document).ready(function(){
  $('#btn-share-post').click(function() {
    var firstBox= $('<div></div>');
    var content = $('<p></p>');
+   //iconos
    var icon = $('<i></i>');
    var icon2 = $('<i></i>');
    var icon3 = $('<i></i>');

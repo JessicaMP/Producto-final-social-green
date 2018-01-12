@@ -6,7 +6,7 @@ function begin() {
     $('footer').removeClass('hide');
   }, 3500);
 };
-
+// Materialize
 $(document).ready(begin);
 // Initializacion de materialize
 $( document ).ready(function(){
@@ -44,12 +44,12 @@ $( document ).ready(function(){
         //mostramos su contenido
         console.log(user1);
         //ocultamos el div de login
-        $('#login1').fadeOut();
+        window.location.href = 'views/green.html';
       });
   }
 
   // Registrando con facebook
-    var user2 = null;
+   var user2 = null;
 
     var $loginBtn2 = $('#start-login-facebook');
 
@@ -67,8 +67,9 @@ $( document ).ready(function(){
           var token = result.credential.accessToken;
           // The signed-in user info.
           var user = result.user;
-          // ...
-        }).catch(function(error) {
+          window.location.href = 'views/green.html';
+        })
+        .catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -100,6 +101,7 @@ $( document ).ready(function(){
         var credential = error.credential;
         // ...
       });
+
       //Cerrar sesion
       firebase
       .auth()
@@ -109,6 +111,7 @@ $( document ).ready(function(){
       }).catch(function(error) {
       // An error happened.
     })
+
     }
 
 
@@ -168,7 +171,7 @@ $( document ).ready(function(){
   }
   observador();
 
-/*------------dierccionar a html -------------------*/
+/*------------direccionar a html -------------------*/
   function aparece() {
 
     var contenido = document.getElementById('contenido');
