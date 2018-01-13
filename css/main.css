@@ -1,7 +1,51 @@
-* {
+#splash2 {
+  background: linear-gradient(#6de, white);
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+}
 
+figure {
+  margin-top: 0;
 
 }
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+.effect{
+  margin: 0;
+  padding: 0;
+}
+
+.loading-page {
+  display: flex;
+  justify-content: center;
+}
+
+.counter p {
+  font-size: 40px;
+  color: black;
+}
+
+.counter h1 {
+  color: green;
+  font-size: 60px;
+  margin-top: -10px;
+  -webkit-text-stroke: 1px #343;
+  font-weight: bold;
+}
+
+.counter hr {
+  background: black;
+  border: none;
+  height: 2px;
+}
+
+.counter {
+  position: relative;
+  width: 200px;
+}
+
+
+
 /*________________________Estilos para el splash____________________*/
 #splash {
   background: #b3ffab; /* fallback for old browsers */
@@ -11,6 +55,7 @@
   min-height: 100%;
   width: 100%;
 }
+
 
 .icons-bottom {
   bottom: 0;
@@ -88,7 +133,7 @@ i.medium {
 
   .letter-box {
     width: 800px;
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
   .letter {
@@ -99,12 +144,13 @@ i.medium {
   }
 
   .social-letter {
-    color: #075;
+    color: white;
+    -webkit-text-stroke: 3px black;
   }
 
   .green-letter {
-    right: 240px;
-    bottom: 205px;
+    right: 300px;
+    bottom: 400px;
     color: green;
   }
 
@@ -116,9 +162,9 @@ i.medium {
 
   .hoja-img {
     width: 400px;
-    top: 250px;
-    right: 350px;
-    -webkit-transform: rotate(35deg);
+    top: 240px;
+    right: 400px;
+    -webkit-transform: rotate(42deg);
     z-index: 2;
   }
 
