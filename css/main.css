@@ -4,11 +4,11 @@
   position: absolute;
   width: 100%;
 }
-
+/*________________________Estilos para el splash____________________*/
 figure {
   margin-top: 0;
-
 }
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
 .effect{
   margin: 0;
@@ -20,37 +20,30 @@ figure {
   justify-content: center;
 }
 
-.counter p {
-  font-size: 40px;
-  color: black;
-}
-
 .counter h1 {
-  color: green;
-  font-size: 60px;
+  color: white;
+  font-size: 70px;
   margin-top: -10px;
-  -webkit-text-stroke: 1px #343;
+  -webkit-text-stroke: 4px green;
   font-weight: bold;
 }
 
 .counter hr {
-  background: black;
+  background: #8c2;
   border: none;
-  height: 2px;
+  height: 3px;
 }
 
 .counter {
-  position: relative;
-  width: 200px;
+  position: absolute;
+  bottom: 0;
+  width: 30%;
 }
 
-
-
-/*________________________Estilos para el splash____________________*/
-#splash {
-  background: #b3ffab; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #b3ffab, #12fff7); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #b3ffab, #12fff7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*#splash {
+  background: #b3ffab;
+  background: -webkit-linear-gradient(to right, #b3ffab, #12fff7);
+  background: linear-gradient(to right, #b3ffab, #12fff7);
   background-size: cover;
   min-height: 100%;
   width: 100%;
@@ -175,7 +168,7 @@ i.medium {
   .image-world-green, .letter, .eyes, .hoja-img {
     position: absolute;
   }
-}
+}*/
 /*________________________Estilos para Page of Star____________________*/
 #page-start {
   background-image: url('../assets/images/background.svg');
@@ -187,7 +180,7 @@ i.medium {
 
 .logo {
   width: 400px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .img-btn {
@@ -199,11 +192,6 @@ i.medium {
 
 .blue-dark {
   background-color: #075;
-}
-
-.bottom-footer {
-  top: 550px;
-  padding-right: 10px;
 }
 
 nav ul a, .bottom-footer a {
@@ -219,11 +207,10 @@ nav ul a, .bottom-footer a {
   margin-top: 20px;
 }
 
-.foot {
-  position: relative;
-  top: 0;
-  margin-left: 20px;
-  font-size: 18px;
+.bottom-footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .menu-drowp {
@@ -297,17 +284,9 @@ nav ul a, .bottom-footer a {
   }
 
   .bottom-footer {
-    top: 573px;
-    padding-right: 180px;
-  }
-
-  .foot {
-    position: static;
-    top: 0;
-    margin-left: 0;
-    font-size: 14px;
-    width: auto;
-    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
 
   .logo-modal {

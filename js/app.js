@@ -16,16 +16,16 @@ $(document).ready(function() {
     if(counter == 101) {
         clearInterval(i);
     }
-  }, 50);
+  }, 23);
 });
 
 // SPLASH
-/*function begin() {
+function begin() {
   setTimeout(function() {
-    $('#splash').fadeOut();
+    $('#splash2').fadeOut();
     $('#page-start').removeClass('hide');
     $('footer').removeClass('hide');
-  }, 3500);
+  }, 2500);
 };
 // Materialize
 $(document).ready(begin);
@@ -167,7 +167,7 @@ $( document ).ready(function(){
       //  window.location.href = 'views/green.html';
 
   /**/
-//}
+}
 
   function observador() {
 
