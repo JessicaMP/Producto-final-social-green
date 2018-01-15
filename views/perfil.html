@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="../css/perfil.css">
   </head>
-  <body>
+  <body class="">
     <header>
       <nav>
-        <div class="nav-wrapper  light-green">
-          <a href="#!" class="brand-logo ">
-            <img src="../assets/images/logo2.png" alt="Logo" class="logo-nav">
+        <div class="nav-wrapper teal darken-3">
+          <a href="../views/green.html" class="brand-logo">
+            <img src="../assets/images/logo-nuevo.png" alt="Logo" class="logo-nav">
             <span class="social-white-letter">Social Green</span>
             <div class="center col s10">
               <a href="#" class="social-green-letter">Social Green</a>
@@ -49,93 +49,189 @@
         </div>
       </nav>
     </header>
-    <section class="row">
-      <div class="col s3 usuario">
-        <figure>
-          <img src="../assets/images/usuario.png" alt="" class="responsive-img photo-user">
-          <form action="#">
-            <div class="file-field input-field">
-              <div class="btn light-green accent-3">
-                <span class="">Photo</span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text" placeholder="Change your photo">
-              </div>
-            </div>
-          </form>
-        </figure>
-        <div class="center">
-          <h5><strong>Name and last name</strong></h5>
-          <h6><strong>"Favorite phrase"</strong></h6>
-          <h6><strong>Telefone number</strong></h6>
-        </div>
-        <div class="center info-user">
-          <a href="#" class="col"><i class="material-icons green-text">create</i><p class="green-text"><strong>400<br>POST</strong></p></a>
-          <a href="#" class="col"><i class="material-icons green-text">face</i><p class="green-text"><strong>100<br>FOLLOWERS</strong></p></a>
-          <a href="#" class="col"><i class="material-icons green-text">favorite</i><p class="green-text"><strong>250<br>FOLLOWING</strong></p></a>
-        </div>
-        <div class="center">
-          <a class="waves-effect waves-light btn green"><i class="material-icons">create</i>Edith</a>
+    <section class="container">
+      <div class="row">
+        <div class="col s3 usuario">
+          <figure>
+            <img src="../assets/images/usuario.png" alt="" class="responsive-img photo-user">
 
-        </div>
-      </div>
-      <div class="col s9">
-        <!--Botones para postear-->
-          <div class="box-btn col offset-s3 grey lighten-3">
-            <div class="">
-              <a class="btn-floating btn-large waves-effect waves-light  btn modal-trigger red" href="#modal3"><i class="material-icons">text_fields</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue" data-target="modal5" href="#modal5"><i class="material-icons">camera_alt</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">star</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">location_on</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">speaker_notes</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">volume_up</i></a>
-              <a class="btn-floating btn-large waves-effect waves-light gray"><i class="material-icons">videocam</i></a>
-            </div>
-            <div class="">
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Text</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Photo</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Score</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Local</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Chat</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Audio</strong></span></a>
-              <a href="#" class="black-text"><span class="btn-letters"><strong>Video</strong></span></a>
-            </div>
+          </figure>
+          <div class="center">
+            <h5><strong>Name and last name</strong></h5>
+            <h6><strong>"Favorite phrase"</strong></h6>
+            <h6><strong>Telefone number</strong></h6>
           </div>
-          <div id="show-post" class="col s12">
-            <div class="">
-              <figure>
-                <img src="" alt="">
-              </figure>
-              <h6>TIPS</h6>
-              <p>1.-No usar aerosoles</p>
-              <p>2.-No quemar basura</p>
-              <p>3.-No pedir cañitas en las bebidas</p>
-              <p>4.-Evitar el consumo de agua enbotellada en plastico</p>
-              <p>5.-No usar bolsas plasticas</p>
-              <div class="iconos-post">
+          <div class="center info-user">
+            <a href="#" class="col"><i class="material-icons green-text">create</i><p class="green-text"><strong>400<br>POST</strong></p></a>
+            <a href="#" class="col"><i class="material-icons green-text">face</i><p class="green-text"><strong>100<br>FRIENDS</strong></p></a>
+            <a href="#" class="col"><i class="material-icons green-text">favorite</i><p class="green-text"><strong>250<br>LIKES</strong></p></a>
+          </div>
+          <div class="center">
+            <a class="waves-effect waves-light btn green"><i class="material-icons">create</i>CORRECT</a>
+
+          </div>
+        </div>
+        <div class="col s9">
+          <!--Botones para postear-->
+            <div class="box-btn col offset-s4 grey lighten-3">
+              <div class="">
+                <a class="btn-floating btn-large waves-effect waves-light  btn modal-trigger green" href="#modal3"><i class="material-icons">text_fields</i></a>
+                <a class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue" data-target="modal5" href="#modal5"><i class="material-icons">camera_alt</i></a>
+                <a class="btn-floating btn-large waves-effect waves-light  btn modal-trigger red" href="#modal4"><i class="material-icons">favorite</i></a>
+                <a class="btn-floating btn-large waves-effect waves-light orange" href="../views/green.html"><i class="material-icons">chrome_reader_mode</i></a>
 
               </div>
+              <div class="">
+                <a href="#" class="black-text"><span class="btn-letters"><strong>Text</strong></span></a>
+                <a href="#" class="black-text"><span class="btn-letters"><strong>Photo</strong></span></a>
+                <a href="#" class="black-text"><span class="btn-letters"><strong>Like</strong></span></a>
+                <a href="#" class="black-text"><span class="btn-letters"><strong>Notice</strong></span></a>
+              </div>
             </div>
-          </div>
+            <div id="show-post" class="show-post col s12">
+              <div class="post1 styleBox">
+                <div class="title">
+                  <h5 class="center-align">tips</h5>
+                </div>
+                  <img src="../assets/images/logo2.png" alt="" class="post-img">
+                  <div class="styleLetter">
+                    <p>1.-No usar aerosoles</p>
+                    <p>2.-No quemar basura</p>
+                    <p>3.-No pedir cañitas en las bebidas</p>
+                    <p>4.-Evitar el consumo de agua enbotellada en plastico</p>
+                    <p>5.-No usar bolsas plasticas</p>
+                  </div>
+                <div class="iconos-post">
+                  <div class="col s5">
+                    <p>7:00 PM</p>
+                  </div>
+                  <div class="col s7">
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_up</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_down</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">mode_comment</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">reply</i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="styleBox">
+                <img src="../assets/images/eco-tips.jpg" alt="" class="post-img">
+                <div class="iconos-post">
+                  <div class="col s5">
+                    <p>11:00 PM</p>
+                  </div>
+                  <div class="col s7">
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_up</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_down</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">mode_comment</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">reply</i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="styleBox">
+                <div class="title">
+                  <h5 class="center-align">tips</h5>
+                </div>
+                  <div class="styleLetter">
+                    <p>Cuidemos nuestro planeta</p>
+                  </div>
+                <div class="iconos-post">
+                  <div class="col s5">
+                    <p>6:00 AM</p>
+                  </div>
+                  <div class="col s7">
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_up</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_down</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">mode_comment</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">reply</i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="styleBox">
+                <img src="../assets/images/recycle.png" alt="" class="post-img">
+                <div class="iconos-post">
+                  <div class="col s5">
+                    <p>1:00 PM</p>
+                  </div>
+                  <div class="col s7">
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_up</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">thumb_down</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">mode_comment</i></a>
+                    <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">reply</i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
       </div>
-
+      </div>
     </section>
     <!--__________________Modales del post____________________-->
     <!--Agregando texto-->
-    <div id="modal3" class="modal modal-fixed-footer modal-height">
+    <div id="modal3" class="modal">
       <div class="modal-content">
         <a href="#"><i class="material-icons">account_circle</i>Usuario</a>
-        <div class="box-right">
+        <div class="row">
+          <div class="col offset-l4 post-header">
+            <input type="text" name="" value="" placeholder="Title" class="title">
+          </div>
+        </div>
           <textarea name="text" id="texto" class="text-area-height" placeholder="¿Qué estas pensando?" type="text" autofocus></textarea>
           <hr>
+          <div class="right">
+            <a id="btn-share-post" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text" disabled><i class="material-icons">public</i>Share</a>
+          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <a id="btn-share-post" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">reply</i>Share</a>
+    </div>
+
+    <!--__________________Modales Like____________________-->
+    <!--Agregando texto-->
+    <div id="modal4" class="modal">
+      <div class="modal-content modal-photo">
+          <div class="center">
+            <h5>Pages that may interest you</h5>
+          </div>
+            <div class="box-right ">
+              <div class="likeBox center light-green lighten-3 row">
+                <img src="../assets/images/like1.jpg" alt="" class="likes-img">
+                <div class="col s9">
+                  <p><strong>GreenPeace</strong></p>
+                </div>
+                <div class="col s2">
+                  <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">favorite</i></a>
+                </div>
+
+              </div>
+
+              <div class="likeBox center light-green lighten-3 row">
+                <img src="../assets/images/like2.jpg" alt="" class="likes-img">
+                <div class="col s9">
+                  <p><strong>National Geographic</strong></p>
+                </div>
+                <div class="col s2">
+                  <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">favorite</i></a>
+                </div>
+
+              </div>
+
+              <div class="likeBox center light-green lighten-3 row">
+                <img src="../assets/images/like3.jpg" alt="" class="likes-img">
+                <div class="col s9">
+                  <p><strong>Ow! Green</strong></p>
+                </div>
+                <div class="col s2">
+                  <a href="#" class="btn-likes"><i class="material-icons btn-likes grey-text">favorite</i></a>
+                </div>
+
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
+
     <!--__________________Modales del photo____________________-->
     <!--Agregando texto-->
     <div id="modal5" class="modal">
@@ -147,7 +243,7 @@
           <div class="file-field input-field">
             <div class="btn light-green accent-3">
               <i class="material-icons">linked_camera</i>
-              <input type="file" multiple>
+              <input id="file-select" type="file" multiple>
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text" placeholder="Change your photo">
@@ -155,11 +251,10 @@
           </div>
         </form>
         <figure class="center">
-          <img src="../assets/images/image-refence.jpg" alt="">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzEiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg1LjUiIHk9IjkwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTcxeDE4MDwvdGV4dD48L3N2Zz4=" alt="" id="img-guardar" class="responsive-img post-img">
         </figure>
         <div class="right col s3">
           <a id="btn-share-photo" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">file_upload</i>Public</a>
-
         </div>
         </div>
       </div>

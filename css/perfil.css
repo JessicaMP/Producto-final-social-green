@@ -1,3 +1,6 @@
+.back {
+  background-image: url('../assets/images/paton-hojas-vectores.jpg');
+}
 .logo-nav {
   width: 0%;
 }
@@ -8,6 +11,20 @@
   font-family: 'Berkshire Swash', cursive;
   color: green;
   text-align: center;
+}
+
+.text-area-height {
+  height: 5rem;
+}
+
+.title::placeholder {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.text-area-height::placeholder, .title::placeholder {
+  color: black;
 }
 
 .social-white-letter {
@@ -23,10 +40,6 @@ nav i.material-search {
   display: inline-block;
 }
 
-input[type=search]:not(.browser-default) {
-  width: auto;
-}
-
 .search-position-movile {
   position: relative;
   right: 120px;
@@ -34,42 +47,45 @@ input[type=search]:not(.browser-default) {
 
 .box-right {
   box-sizing: border-box;
-  float: right;
   padding: 10px;
   width: 100%;
-  position: static;
-  margin-top: 30px;
   background-color: white;
-}
-
-.text-area-height {
-  height: 5rem;
 }
 
 .styleBox {
   background-color: white;
-  width: auto;
-  height: 100px;
-  text-decoration: none;
+  width: 250px;
+  height: auto;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 10px;
-  margin: 0;
-  margin-bottom: 20px;
-  overflow: hidden;
   border: 2px solid #055;
+  margin: 5px;
+  display: inline-block;
 }
 
-.styleLetter {
-  text-decoration: none;
-  margin: 0;
-  padding: 5px 0;
-  letter-spacing: 2px;
+.post-img {
+  width: 200px;
 }
 
 .modal.modal-height {
   height: 50%;
 }
+
+.title h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.styleLetter {
+  position: relative;
+  overflow: hidden;
+}
+
+.styleLetter p {
+  margin: 3px 0;
+}
+
 @media (min-width: 992px) {
   .logo-nav {
     width: 15%;
@@ -95,14 +111,12 @@ input[type=search]:not(.browser-default) {
     display: block;
   }
 
-  input[type=search]:not(.browser-default) {
-    width: 100%;
-  }
-
   .usuario {
-    border: 15px solid #055;
+    border-radius: 10px;
+    border: 5px solid #00695c;
     min-height: 100%;
     box-sizing: border-box;
+    margin-top: 10px;
   }
 
   .photo-user {
@@ -117,4 +131,73 @@ input[type=search]:not(.browser-default) {
     max-width: 50%;
     border-radius: 10px;
   }
+
+  .styleBox {
+    background-color: white;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #055;
+    margin: 5px;
+    display: inline-block;
+  }
+
+  .post-img {
+    width: 225px;
+  }
+
+  .container {
+    width: 85%;
+  }
+
+  .title h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .show-post {
+    -moz-column-width: 250px;
+    -webkit-column-width: 250px;
+    column-width: 250px;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+  }
+
+  .styleLetter {
+    position: relative;
+    overflow: hidden;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .styleLetter p {
+    margin: 3px 0;
+  }
+
+  .likeBox {
+    width: 200px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 10px;
+    border: 2px solid green;
+  }
+
+  .btn-likes {
+    margin-top: 10px;
+  }
+
+  .likes-img {
+    width: 80%;
+    border: 2px solid green;
+    margin-top: 5px;
+    border-radius: 10px;
+  }
+
 }
