@@ -1,63 +1,99 @@
 
-$(document).ready(function(){
-   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-   $(".button-collapse").sideNav();
-   $('.modal').modal();
- });
- // Post de texto
-  $('#btn-share-post').click(function() {
-    var firstBox= $('<div></div>');
-    var content = $('<p></p>');
-    var icon = $('<i></i>');
-    var icon2 = $('<i></i>');
-    var icon3 = $('<i></i>');
-    content.text($('#texto').val());
-    icon.text('favorite');
-    icon2.text('thumb_up');
-    icon3.text('thumb_down');
-    var time = $('<p></p>');
-    time.text(timeDate());
-    firstBox.addClass('styleBox');
-    content.addClass('styleLetter');
-    time.addClass('styleLetter');
-    icon.addClass('material-icons');
-    icon2.addClass('material-icons');
-    icon3.addClass('material-icons');
-    if ($('#texto').val('')) {
-      firstBox.append(content);
-      firstBox.append(time);
-      firstBox.append(icon);
-      firstBox.append(icon2);
-      firstBox.append(icon3);
-      $('#show-post').append(firstBox);
-    }
-    $('#texto').val(' ');
-    $('#texto').focus();
-  });
- $('#texto').keyup(function() {
-   var contenido = $('#texto').val();
-   var length = $('#texto').val().lenght;
-   if (contenido == '') {
-     $('#btn-share-post').addClass('transparent');
-   }else {
-     $('#btn-share-post').addClass('red')
-     $('#texto').css('height', '80px');
-     $('#texto').css('height', $('#texto').scrollHeight + 'px');
-     $('.box-right').css('height', '200px');
-     $('.box-right').css('height', $('.box-right').scrollHeight + 'px');
-   }
- });
+window.onload = inicializar;
+var fichero;
+var storageRef;
+var imagenesFBref;
+/*publicacion*/
+var formConvalidaciones;
+var refConvalidaciones;
+var tbodyTablaConvalidaciones;
 
- 
- // Agregando la hora
- var timeDate = function () {
-   var f = new Date();
-   var time = f.getHours() + ":" + f.getMinutes();
-   var timeAbsolute = '';
-   if (f.getHours() <= 12) {
-     timeAbsolute = time + ' AM';
-   }else {
-     timeAbsolute = time + ' PM';
-   }
-   return timeAbsolute;
- }
+
+function inicializar() {
+  fichero = document.getElementById('fichero');
+  fichero.addEventListener('change', subirImagenFirebase, false);
+
+  storageRef = firebase.storage().ref();
+// traer imagen de storage - firebase
+  imagenesFBref = firebase.database().ref().child('imagenesFB');
+  mostrarImagenesDeFirebase();
+
+//convalidacion
+  formConvalidaciones = document.getElementById('form-convalidaciones');
+  formConvalidaciones.addEventListener("submit", enviarConvalidacionFirebase ,false)
+
+  tbodyTablaConvalidaciones = document.getElementById("tbody-tabla-convalidaciones");
+
+
+   refConvalidaciones = firebase.database().ref().child("convalidaciones");
+   mostrarConvalidacionesDeFirebase();
+//
+  }
+function enviarConvalidacionFirebase(event) {
+  event.preventDefault();
+  refConvalidaciones.push({
+    moduloAConvalidar: event.target.moduloAConvalidar.value
+  });
+}
+
+function mostrarImagenesDeFirebase(){
+//cada vez que carge una imagen  'imagenesFB'
+  imagenesFBref.on('value',function(snapshot){
+    var datos = snapshot.val();
+    var result = "";
+    for(var key in datos){
+      result += '<img class="imagesFB" width= "400" src="' + datos[key].url + '"/>';
+    }
+    document.getElementById('imagenes-de-firebase').innerHTML = result;
+  })
+}
+
+//convalidaciones
+function mostrarConvalidacionesDeFirebase() {
+  refConvalidaciones.on('value',function(snap){
+    var datos = snap.val();
+    var filasAMostrar = "";
+    for(var key in datos){
+      filasAMostrar += "<p class=box-text>" + datos[key].moduloAConvalidar + "</p>";
+    }
+    tbodyTablaConvalidaciones.innerHTML = filasAMostrar;
+  })
+}
+//
+
+//  document.getElementById("ejemplo").style.padding="10px 0 5px 0";
+function subirImagenFirebase() {
+  var imagenASubir = fichero.files[0];
+
+  var uploadTask = storageRef.child('imagenes/' + imagenASubir.name).put(imagenASubir);
+
+  document.getElementById('progreso').className = "";
+  uploadTask.on('state_changed',
+   function(snapshot){
+
+     // se muestra progreso de sbida
+     var barraProgreso = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    console.log('Upload is ' + barraProgreso  + '% done');
+    switch (snapshot.state) {
+      case firebase.storage.TaskState.PAUSED: // or 'paused'
+        console.log('Upload is paused');
+        break;
+      case firebase.storage.TaskState.RUNNING: // or 'running'
+        console.log('Upload is running');
+        break;
+    }
+
+  }, function(error) {
+    // gestionar error
+    alert('hubo error')
+  }, function() {
+    // se subio imgen
+    var downloadURL = uploadTask.snapshot.downloadURL;
+    crearNodoEnBDFirebase(imagenASubir.name, downloadURL);
+    document.getElementById('progreso').className = "hidden";
+  });
+    function crearNodoEnBDFirebase(nombreImagen, downloadURL) {
+      imagenesFBref.push({nombre: nombreImagen, url: downloadURL});
+    }
+
+}

@@ -74,6 +74,12 @@ body{
 /*  border: 1px solid red;*/
   height: 100vh;
 }
+.between-left{
+
+}
+.between-right{
+
+}
 /*destock*/
   @media (min-width: 992px) {
 .left-desktop{
@@ -86,7 +92,7 @@ body{
 .col{
   height: 100vh;
   width: 100%;
-  border: 1px solid #b2c8ad;
+/*  border: 1px solid #b2c8ad;*/
 
 }
 .btn-left{
@@ -153,8 +159,57 @@ body{
   padding: 10px;
 }
 .quar{
- background:rgba(228, 246, 234, 0.77);
+
   width:100%;
   text-align: center;
   padding: 10px;
+}
+
+/*publicacion*/
+.hidden{
+  visibility: hidden;
+}
+
+.publicacion{
+
+  border: 1px solid green;
+}
+.box-text{
+  border: 1px solid green;
+  margin: 5px;
+  border-radius: 5px;
+ background:rgba(251, 251, 251, 0.82);
+}
+.imagesFB{
+  border: 1px solid green;
+  margin: 5px;
+  border-radius: 5px;
+
+}
+
+.upload{
+  width: 60px;
+
+}
+.icon-m{
+  width: 50px;
+  margin: 10px;
+  padding-top: 10px;
+  float: right;
+}
+.label-up{
+  width: 100px;
+  height: 80px;
+  padding: 10px;
+}
+.between-cent{
+
+}
+.lista{
+  width: 300px;
+
+}
+
+.inline-bet{
+  display: inline-block;
 }

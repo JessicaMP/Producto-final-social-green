@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="../css/green.css">
   </head>
   <body>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC6dtzyktS5W3jC4XQTPZvpFkbFUgvyA6I",
+        authDomain: "publicacion-96d60.firebaseapp.com",
+        databaseURL: "https://publicacion-96d60.firebaseio.com",
+        projectId: "publicacion-96d60",
+        storageBucket: "publicacion-96d60.appspot.com",
+        messagingSenderId: "464310935528"
+      };
+      firebase.initializeApp(config);
+    </script>
+
 
       <div class="row">
 
@@ -27,63 +41,101 @@
            <a class="btn-left btn-floating green btn-large waves-effect waves-light red"><i class="material-icons">import_contacts</i></a>
          </div>
        </div>
+
        <div class="right-movil s6">
          <a class="btn-left btn-floating green btn-large waves-effect waves-light red"><i class="material-icons">search</i></a>
          <a class="btn-left btn-floating green btn-large waves-effect waves-light red"><i class="material-icons">menu</i></a>
 
        </div>
-       <div class="between col s12 l7">
-         <nav class="search">
-           <div class="nav-wrapper">
-             <form >
-               <div class="input-field green">
-                 <input id="search" type="search" required>
-                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                 <i class="material-icons">close</i>
-<!---->       </div><!--input-field green-->
+
+       <div class="between col s12 l3">
+         <div class="between-left inline-bet">
+
+           <nav class="search">
+             <div class="nav-wrapper">
+               <form >
+                  <div class="input-field green">
+                   <input id="search" type="search" required>
+                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                   <i class="material-icons">close</i>
+                  </div><!--input-field green-->
+               </form>
+             </div>
+           </nav>
+
+           <div class="publicacion">
+
+
+             <form id="form-convalidaciones">
+               <div class="form-group">
+                 <label for="modulo-a-convalidar">Share</label>
+                 <textarea rows="8" cols="80"type="text" name="moduloAConvalidar" value="" id="modulo-a-convalidar"></textarea>
+               </div>
+               <input type="submit" name="" value="Share">
              </form>
 
-             <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Publicar</a>
+             <div class="div-publicacion">
+               <!-- publicacion texto-->
+                     <div id="tbody-tabla-convalidaciones" class="">
 
-             <div id="modal3" class="modal modal-fixed-footer">
-               <div class="modal-content">
-                 <a href="#"><i class="material-icons">account_circle</i>Usuario</a>
-                 <div class="box-right">
-                   <textarea name="text" id="texto" class="text-area-height" placeholder="¿Qué estas pensando?" type="text" autofocus></textarea>
-
-                 </div>
-               </div>
-               <div class="modal-footer">
-                 <a id="btn-share-post" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green white-text"><i class="material-icons">reply</i>Share</a>
-                <hr>
-               </div>
+                     </div>  <!--tbody-tabla-convalidaciones-->
              </div>
-              <br>
-              <div class="images">
-                <div class="quar">
-                  <img class="imgAm"src="http://www.yucatanalamano.com/wp-content/uploads/2017/05/MG_1328.jpg" alt="">
 
-                </div>
-                <div class="quar">
-                  <img class="imgAm"src="https://www.expoknews.com/wp-content/uploads/2015/02/dia-del-arbol.jpg" alt="">
-
-                </div>
-                <div class="quar">
-                  <img class="imgAm"src="https://i.pinimg.com/originals/da/84/7a/da847a7721794827708938a97a0b77c6.jpg" alt="">
-
-                </div>
-                <div class="quar">
-                  <img class="imgAm" src="http://www.aprendizajeverde.net/sites/default/files/practicas/reforestemos-y-salvemos-nuestro-planeta-1.jpg" alt="">
-
-                </div>
-              </div>
 
 
            </div>
-         </nav>
+
+         </div>
+
+
+    </div>
+
+         <div class="between-right col l5">
+
+           <div class="between-cent">
+             <form id="form-imagenes">
+               <label class="btn transparent label-up" >
+                 <input type="file" name="fichero" value="" id="fichero" hidden>
+                 <img src="../assets/icon/upload.ico" alt="" class="upload">
+               </label>
+               <label for="">
+
+               <a href="#"><img src="../assets/icon/folder.png" alt="" class="icon-m"></a>
+               <a href="#"><img src="../assets/icon/Time-zones-icon.png" alt="" class="icon-m"></a>
+               <a href="#"><img src="../assets/icon/network-checklist-icon.png" alt="" class="icon-m"></a>
+               </label>
+             </form>
+
+             <div class="hidden" id="progreso">
+               <div class="progress">
+                 <div id="barra-de-progreso"class="indeterminate" style="width: 30%"></div>
+               </div>
+             </div>
+              <hr>
+             <!-- publicacion imagenes-->
+                 <div id="imagenes-de-firebase">
+
+                 </div>  <!-- imagenes-de-firebase-->
+           </div>
+
+         </div>
+
+
+
+       <div class="l5">
 
        </div>
-       <div class="right-desktop s12 col l4">
+
+       <div class="right-desktop s12 col l3">
+         <div class="div-right events">
+           <div class="sub-div">
+            <p class="title">Contactos</p>
+           </div>
+           <div class="event-up">
+             <a href="#"><img class="lista"src="../assets/icon/lista.png" alt="" class="icon-m"></a>
+           </div>
+          </div>
+
          <div class="content-right">
            <div class="div-right events">
              <div class="sub-div">
@@ -132,10 +184,8 @@
        </div><!--right -->
 
 
-
     <script src="../vendors/js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="../vendors/materialize/js/materialize.min.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="../js/green.js"></script>
   </body>
 </html>
